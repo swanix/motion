@@ -1,0 +1,113 @@
+<!-- AI-generated code, reviewed and refined by a human -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swanix Motion</title>
+    <style>
+        body {
+            display: flex; /* Align items in a flexible box */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            height: 100vh; /* Full viewport height */
+            background-color: #121212; /* Dark background color */
+            margin: 0; /* Remove default margin */
+            transition: background-color 0.3s; /* Smooth transition for background color change */
+        }
+
+        .container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+
+
+        /* Circle */
+        .circle {
+            width: 100%;
+            height: 100%;
+            background-color: #e2e0e0; /* Gray color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(128, 128, 128, 0.8); /* Gray scale shadow */
+            position: absolute;
+            z-index: 2;
+            transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .circle:hover {
+            transform: scale(1.1); /* Increase size on hover */
+            background: #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* White shadow on hover */
+        }
+
+        /* Wave effect */
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba(201, 201, 201, 0.4);
+            animation: pulse 2s infinite ease-out;
+            display: none; /* Hide by default */
+        }
+
+        .wave:nth-child(1) { animation-delay: 0s; }
+        .wave:nth-child(2) { animation-delay: 0.5s; }
+        .wave:nth-child(3) { animation-delay: 1s; }
+
+        /* Expansion animation */   
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* Logo */
+        .logo {
+            width: 90px;
+            height: 90px;
+            margin-left: -8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="circle">
+            <svg class="logo width="88" height="112" viewBox="0 0 88 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M83.136 39.9738L84.3228 25.7046L73.1279 26.0223L83.136 39.9738Z" fill="black"/>
+                <path d="M84.332 66.0362C81.7823 61.2236 77.9411 57.2173 73.2399 54.4675C69.7388 52.3058 63.1976 49.6395 53.6162 46.4685C44.0349 43.2976 38.1696 40.4038 36.0203 37.7873C33.7777 35.0936 32.6806 31.6279 32.9646 28.1344C33.0366 26.0155 33.5617 23.9366 34.5047 22.0378C35.4476 20.139 36.7865 18.4642 38.4312 17.1264C43.0299 13.1491 49.0061 11.1358 55.074 11.5196C58.3192 11.7474 61.4759 12.6785 64.3252 14.2482C66.1194 23.5275 73.2026 22.8453 74.6043 22.6117H84.1826C83.7247 21.3034 80.2485 10.4637 71.9131 5.79135C66.5484 2.84134 60.5741 1.17189 54.4573 0.913447C48.7679 0.481104 43.0561 1.38347 37.7771 3.54864C32.8841 5.52602 28.7518 9.01652 25.9842 13.51C23.2049 17.9821 21.6306 23.0976 21.4147 28.3586C21.1381 32.9821 22.0113 37.602 23.9564 41.8056C26.0261 46.0494 29.1785 49.6724 33.0954 52.3089C36.31 54.589 41.9946 57.1556 50.1494 60.0089C58.3041 62.8621 63.5621 64.9148 65.9231 66.167C69.6049 68.092 72.2058 70.3503 73.7259 72.9419C75.2741 75.6459 75.9863 78.7481 75.7724 81.8566C75.6415 85.0633 74.6117 88.1685 72.8008 90.8181C72.5765 91.1452 72.3335 91.4629 72.0906 91.7526C72.2463 90.8991 72.2903 90.029 72.2214 89.1641C71.4365 79.7634 57.2701 73.2783 40.5151 74.6613C37.7371 74.8956 34.9814 75.3455 32.2731 76.0069C29.2361 72.8858 20.5923 66.0922 2.61327 65.7932L14.0604 79.1747L0.127563 75.9976C0.127563 75.9976 10.5469 87.5849 20.0223 92.5282C22.7007 98.0731 26.9685 102.695 32.2825 105.807C37.6587 108.922 44.415 110.738 52.551 111.255C58.5656 111.717 64.5987 110.64 70.0814 108.124C75.2226 105.812 79.5543 102.014 82.5192 97.2192C85.4656 92.4613 87.1419 87.027 87.3877 81.4361C87.7326 76.124 86.679 70.8142 84.332 66.0362ZM77.1835 15.5752C77.701 15.5752 78.2068 15.7286 78.6371 16.0161C79.0673 16.3036 79.4027 16.7123 79.6007 17.1904C79.7988 17.6685 79.8507 18.1946 79.7497 18.7021C79.6487 19.2097 79.3995 19.6759 79.0336 20.0418C78.6676 20.4077 78.2015 20.6569 77.6939 20.7579C77.1864 20.8589 76.6602 20.807 76.1822 20.609C75.704 20.411 75.2954 20.0756 75.0079 19.6453C74.7204 19.215 74.5669 18.7092 74.5669 18.1917C74.5669 17.4977 74.8426 16.8322 75.3332 16.3415C75.8239 15.8508 76.4895 15.5752 77.1835 15.5752Z" fill="black"/>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const circle = document.querySelector('.circle');
+        const waves = document.querySelectorAll('.wave');
+
+        circle.addEventListener('click', () => {
+            waves.forEach(wave => {
+                if (wave.style.display === 'block') {
+                    wave.style.display = 'none'; // Hide waves if they are visible
+                } else {
+                    wave.style.display = 'block'; // Show waves when clicked
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
