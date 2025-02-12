@@ -37,12 +37,14 @@
             z-index: 2;
             transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
             cursor: pointer; /* Change cursor to pointer */
+            outline: none; /* Remove focus on Android */
         }
 
         .circle:hover {
             transform: scale(1.1); /* Increase size on hover */
             background: #ffffff;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* White shadow on hover */
+            outline: none; /* Ensure no outline when focused */
         }
 
         /* Wave effect */
